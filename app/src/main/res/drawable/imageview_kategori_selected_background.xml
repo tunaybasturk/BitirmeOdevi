@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/bottom_nav_selected" /> <!-- Bu, arka plan rengini şeffaf yapar -->
+    <stroke android:width="2dp" android:color="@color/bottom_nav_selected" /> <!-- Bu, çerçevenin kalınlığını ve rengini tanımlar -->
+    <padding android:left="4dp" android:top="4dp" android:right="4dp" android:bottom="4dp" /> <!-- İç padding -->
+    <corners android:radius="50dp" /> <!-- Bu, köşe yarıçapını ayarlar ve çerçevenin yuvarlak olmasını sağlar -->
+</shape>

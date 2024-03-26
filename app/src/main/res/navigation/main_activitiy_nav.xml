@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activitiy_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/yemekDetayGecis"
+            app:destination="@id/yemeklerDetayFragment" />
+        <action
+            android:id="@+id/yemekSepetGecis"
+            app:destination="@id/sepetYemeklerFragment" />
+        <action
+            android:id="@+id/yemekFavoriGecis"
+            app:destination="@id/favoriYemeklerFragment" />
+        <argument
+            android:name="favoriYemekListe"
+            app:argType="string"
+            android:defaultValue='""' />
+    </fragment>
+    <fragment
+        android:id="@+id/yemeklerDetayFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.YemeklerDetayFragment"
+        android:label="fragment_yemekler_detay"
+        tools:layout="@layout/fragment_yemekler_detay" >
+        <argument
+            android:name="yemek"
+            app:argType="com.example.bitirmeprojesi.data.entity.Yemekler" />
+        <argument
+            android:name="kategori_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetYemeklerFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.SepetYemeklerFragment"
+        android:label="fragment_sepet_yemekler"
+        tools:layout="@layout/fragment_sepet_yemekler" />
+    <fragment
+        android:id="@+id/favoriYemeklerFragment"
+        android:name="com.example.bitirmeprojesi.ui.fragment.FavoriYemeklerFragment"
+        android:label="fragment_favori_yemekler"
+        tools:layout="@layout/fragment_favori_yemekler" >
+        <action
+            android:id="@+id/anasayfaGecis"
+            app:destination="@id/anasayfaFragment" />
+        <argument
+            android:name="favoriYemekListesi"
+            app:argType="string" />
+        <action
+            android:id="@+id/yemekSepetGecis2"
+            app:destination="@id/sepetYemeklerFragment" />
+    </fragment>
+</navigation>
